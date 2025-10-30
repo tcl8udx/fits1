@@ -18,3 +18,25 @@ You are welcome to modify the provided code for your projects and to use other p
 * TH1hist2Numpy.ipynb : an example for converting a ROOT histogram to numpy arrays
 
 Note that from ROOT you can type ```new TBrowser()``` or in Python r.TBrowser() to get a graphical browser that allows you to look at what's contained in the TFiles.
+
+
+
+STUDENT ANSWERS TO CANVAS QUESTIONS:
+
+EXERCISE 1:
+Q: How does the 1 sigma width of this distribution compare to the typical size of the uncertainty reported for this fit parameter?
+A: Comparing our plot statistics with our printed uncertainties for the mean, they are the same. This seems reasonable, because I would expect that if the mean value has an uncertainty of - in this case - 0.369, then most mean values should only differ by that much, which is nothing else but one sigma in the distribution of mean values.
+
+EXERCISE 2:
+Q: How do your results compare to the expected values in each case? How do the distributions of the parameter values from the fits compare to the estimated uncertainty on the fit parameters?
+A: As anticipated, the NLL method remained more consistently close to the expected value with a relatively small uncertainty, whereas the chi-squared method still centered on the correct value, but had far more variation and much higher errors from experiment to experiment.
+
+EXERCISE 3:
+Q: Estimate the "p-value" of your original fit.
+A: Run to run, our p-value hovers around 0.5
+
+Q: Give a comparison of the errors reported by the fitter and the results of your scans.
+A: Both NLL and Chi2 did remarkably well at recapturing the ROOT fit mean values from minimizing the contour. Specifically, we found for NLL, the ROOT fit gave mu = 53.420 +/- 2.088 and the contour was at mu = 53.315. The chi-squared ROOT fit gave mu = 49.781 +/- 0.323 and the contour gave mu = 49.797.
+
+
+
